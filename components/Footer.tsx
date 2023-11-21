@@ -10,7 +10,7 @@ export default function Footer() {
             <h2 className="font-albert text-lg md:text-2xl font-bold mb-1">
               BALKAPSO
             </h2>
-            <span className="text-gray-400">Trust is what we build</span>
+            <small className="text-gray-400">Trust is what we build</small>
           </div>
           <div className="mt-6 col-span-3 md:mt-0 md:col-span-1 justify-self-start md:justify-self-end">
             <Link href="/terms" className="text-blue-100">
@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-center py-4 border-t border-t-slate-500">
+      <div className="text-center py-4 px-6 border-t border-t-slate-500">
         <small className="text-gray-400">
           &copy;2023 BALKAPSO <span className="mx-2">•</span> All rights
           reserved. <span className="mx-2">•</span> Made with ❤ by{" "}
