@@ -1,8 +1,9 @@
 import React from "react";
-import InternshipCard from "../components/InternshipCard";
 import testimonials from "../data/testimonials";
 import TestimonialCard from "../components/TestimonialCard";
 import Link from "next/link";
+import CourseCard from "../components/CourseCard";
+import courses from "../data/courses";
 
 export default function page() {
   return (
@@ -35,15 +36,26 @@ export default function page() {
             </p>
           </div>
           <div className="md:col-span-2">
-            <InternshipCard />
+            {courses.map((course, index) => (
+              <CourseCard
+                id={index}
+                name={course.name}
+                description={course.description}
+                slug={course.slug}
+                price={course.price}
+                offerPrice={course.offerPrice}
+                thumbnail={course.thumbnail}
+                registration_link={course.registration_link}
+              />
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-slate-300 p-6 md:p-10 rounded-3xl my-10 md:my-15">
+      <section className="bg-slate-100 p-6 md:p-10 rounded-3xl my-10 md:my-15">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-7">
           <div className="py-5 md:col-span-2">
-            <h1 className="text-4xl md:text-5xl mb-2 font-poppins font-normal md:font-medium">
+            <h1 className="text-3xl md:text-5xl mb-2 md:mb-4 font-normal md:font-medium">
               Wall of Love...
             </h1>
             <p className="mb-2 text-md">
