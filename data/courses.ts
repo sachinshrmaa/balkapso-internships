@@ -11,6 +11,7 @@ const courses: CourseData[] = [
     offerPrice: 3000,
     registration_link: "https://forms.gle/im6rHCq1fJ59LMCu8",
     thumbnail: "/civil-internship.png",
+    content: '<ul className="ml-10"><li className="list-disc">Learn the basics of structural design</li><li className="list-disc">Master AutoCAD, the industry-standard drafting software</li><li className="list-disc">Learn to frame estimate.</li><li className="list-disc">Understand the importance of soil testing and its techniques</li><li className="list-disc">Understand the concepts of SFD and BMD in real life structure</li><li className="list-disc">Experience real-world retrofitting projects</li><li className="list-disc">Visit ongoing construction sites</li></ul>',
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const courses: CourseData[] = [
     offerPrice: 3000,
     registration_link: "https://forms.gle/CacuaZirXxJXxqWW7",
     thumbnail: "/computer-internship.png",
+    content: "",
   },
 ];
 

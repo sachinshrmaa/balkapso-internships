@@ -35,8 +35,8 @@ export default function DetailedPage({ params }) {
       </Link>
 
       {course.map((cohort) => (
-        <div className="grid grid-cols-3 gap-8 my-6">
-          <div className="col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-6">
+          <div className="col-span-3 md:col-span-2">
             <Image
               src={cohort.thumbnail}
               height="400"
@@ -45,7 +45,7 @@ export default function DetailedPage({ params }) {
               className="rounded-3xl w-full"
             />
           </div>
-          <div className="rounded-3xl p-8 bg-slate-100 col-span-1 flex flex-col justify-between">
+          <div className="rounded-3xl p-8 bg-slate-100 col-span-3 md:col-span-1 flex flex-col justify-between">
             <div>
               <p className="text-lg mb-4">
                 <b>Price: </b>
@@ -75,6 +75,8 @@ export default function DetailedPage({ params }) {
             </h1>
 
             <p className="mb-6">{cohort.description}</p>
+
+            <div dangerouslySetInnerHTML={{ __html: cohort.content }} />
           </div>
         </div>
       ))}

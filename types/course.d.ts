@@ -9,4 +9,5 @@ export type CourseData = {
   offerPrice: number;
   registration_link: string;
   thumbnail: string;
+  content: string;
 };
