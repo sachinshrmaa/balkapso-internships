@@ -1,11 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { CourseData } from "../types/course";
-import { FC } from "react";
+import React, { FC } from "react";
 
-const CourseCard: FC<CourseData> = ({
-  id,
+type CourseCardProp = {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  offerPrice: number;
+  thumbnail: string;
+  slug: string;
+  registration_link: string;
+};
+
+const CourseCard: FC<CourseCardProp> = ({
   name,
   description,
   price,

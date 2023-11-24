@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import courses from "../../data/courses";
 import Image from "next/image";
 import Link from "next/link";
+import { ImageResponse } from "next/server";
 
 type Props = {
   params: { slug: string };
@@ -79,6 +80,26 @@ export default function DetailedPage({ params }) {
             <div dangerouslySetInnerHTML={{ __html: cohort.content }} />
           </div>
         </div>
+      ))}
+
+      {course.map((cohort) => (
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12 rounded-3xl">
+          <div>
+            <Image
+              src={cohort.instructorImg}
+              height="400"
+              width="1500"
+              alt="Winter training for Civil"
+              className="rounded-3xl w-full"
+            />
+          </div>
+          <div className="bg-slate-100 p-10 rounded-3xl md:col-span-2">
+            <h1 className="font-bold text-xl md:text-3xl mb-3 md:mb-5">
+              Meet the Instructor
+            </h1>
+            <div dangerouslySetInnerHTML={{ __html: cohort.instructorDetails }} />
+          </div>
+        </section>
       ))}
     </div>
   );

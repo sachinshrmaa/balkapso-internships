@@ -10,4 +10,6 @@ export type CourseData = {
   registration_link: string;
   thumbnail: string;
   content: string;
+  instructorImg: string;
+  instructorDetails: string;
 };
